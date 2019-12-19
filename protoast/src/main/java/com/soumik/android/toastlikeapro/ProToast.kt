@@ -17,10 +17,12 @@ class ProToast {
 
             val inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
             val view = inflater.inflate(R.layout.toast_pro, null)
+            view.setBackgroundResource(R.drawable.bg_toast_success)
             val icon = view.findViewById<ImageView>(R.id.iv_icon)
             icon.setImageResource(R.drawable.ic_success)
             val textView = view.findViewById<TextView>(R.id.tv_toast_message)
             textView.text=message
+            textView.setTextColor(Color.parseColor("#FFFFFF"))
 
             val toast = Toast(context)
             toast.setGravity(Gravity.CENTER_HORIZONTAL or Gravity.BOTTOM,0,120)
@@ -39,6 +41,7 @@ class ProToast {
             icon.setImageResource(R.drawable.ic_error)
             val textView = view.findViewById<TextView>(R.id.tv_toast_message)
             textView.text=message
+            textView.setTextColor(Color.parseColor("#FFFFFF"))
 
             val toast = Toast(context)
             toast.setGravity(Gravity.CENTER_HORIZONTAL or Gravity.BOTTOM,0,120)
@@ -74,7 +77,7 @@ class ProToast {
             icon.setImageResource(R.drawable.ic_info)
             val textView = view.findViewById<TextView>(R.id.tv_toast_message)
             textView.text=message
-            textView.setTextColor(Color.parseColor("#000000"))
+            textView.setTextColor(Color.parseColor("#FFFFFF"))
 
             val toast = Toast(context)
             toast.setGravity(Gravity.CENTER_HORIZONTAL or Gravity.BOTTOM,0,120)
